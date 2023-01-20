@@ -1,13 +1,21 @@
-//base arifmetic
-const  width = 10;
-const height = 5;
-const space = width * height;
-const newWight = width - 4;
-const newWidth = newWight / newWight;
-const volume = 2 ** 3;
-console.log(volume);
+// operators =
+let age = 18 + 5;
+age += 2; 
+age -=3;
+age *= 2;;
+age /=2;
 
-//string 
-const city = 'Moscow';
-const street = 'Red square';
-console.log(city + ', ' + street + ' ' + 5 );
+age ++;
+age --;
+
+console.log(age);
+
+//operators compare
+
+const vasy = 20;
+console.log(age > vasy);
+console.log(age < vasy);
+console.log(age >= vasy);
+console.log(age <= vasy);
+console.log(age == vasy);
+console.log(age != vasy);
