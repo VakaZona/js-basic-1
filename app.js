@@ -1,21 +1,11 @@
-// operators =
-let age = 18 + 5;
-age += 2; 
-age -=3;
-age *= 2;;
-age /=2;
+const isSuit = 100 - 10 > 90 - 5;
+console.log(isSuit);
 
-age ++;
-age --;
+const a = (6 + 10) / 2;
+console.log(a);
 
-console.log(age);
-
-//operators compare
-
-const vasy = 20;
-console.log(age > vasy);
-console.log(age < vasy);
-console.log(age >= vasy);
-console.log(age <= vasy);
-console.log(age == vasy);
-console.log(age != vasy);
+let b;
+let c;
+c = b = 100 + 50;
+console.log(c);
+console.log(b);
