@@ -1,13 +1,14 @@
-const startDeposit = 12000
-const procent = 0.07
-const timeMouth = 24
+const secretNumber = '7'
 
-const endDeposit = startDeposit * (1 + procent / 12) ** timeMouth
-console.log(`Deposit End ${endDeposit}`)
-
-if (endDeposit > 13500) {
-    console.log('Yes')
-} else {
-    console.log('No')
+if (Number(secretNumber) === 7) {
+    console.log('yes ===')
 }
 
+if (secretNumber ==7) {
+    console.log('yes ==')
+}
+
+const q = Number(prompt('Inter number'))
+if ( q === 7) {
+    console.log('yes ===')
+}
