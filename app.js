@@ -1,6 +1,9 @@
-console.log(Boolean(0))
-console.log(Boolean(''))
-let a
-console.log(Boolean(a))
-console.log(Boolean(null))
-console.log(Boolean(Number('xs')))
+const money = 100
+
+if (money > 50) {
+    console.log('Can buy item')
+} else if (money > 5) {
+    console.log('Can buy mini item')
+} else {
+    console.log('No money')
+}
