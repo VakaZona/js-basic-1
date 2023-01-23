@@ -1,11 +1,13 @@
-const input = prompt('7+15=? \n7-15=?')
+const isAdmin = true
+const canWrite = true
 
-switch (true) {
-    case (input === 'Im not robot'):
-    case (input === '22'):
-    case (input === '-8'):
-        console.log('Success')
-        break
-    default:
-        console.log('You robot!')
-}
+console.log(`System file ${isAdmin && canWrite}`)
+console.log(`Standart file ${isAdmin || canWrite}`)
+console.log(`Inventor admin ${!isAdmin}`)
+
+const isEdited = true
+const isSuperAdmin = true
+
+console.log(`System file is editied ${
+    isAdmin && canWrite && (!isEdited || isSuperAdmin)}`)
+
