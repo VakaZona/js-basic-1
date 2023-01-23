@@ -1,13 +1,17 @@
+console.log('Vasy' || 'Oleg')
+console.log(false || 'Oleg')
+
+console.log('Vasy' && 'Oleg')
+console.log(false && 'Oleg')
+console.log(false && false)
+
+let a 
+let b = 'Masha'
+const username = a || 'Petr'
+const username2 = b || 'Petr'
+console.log(username)
+console.log(username2)
+ 
 const isAdmin = true
-const canWrite = true
-
-console.log(`System file ${isAdmin && canWrite}`)
-console.log(`Standart file ${isAdmin || canWrite}`)
-console.log(`Inventor admin ${!isAdmin}`)
-
-const isEdited = true
-const isSuperAdmin = true
-
-console.log(`System file is editied ${
-    isAdmin && canWrite && (!isEdited || isSuperAdmin)}`)
-
+const fileName = isAdmin && 'file.mp4'
+console.log(fileName)
