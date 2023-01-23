@@ -1,16 +1,19 @@
-const projectName = 'Site Shop';
-const price = 2000;
-const author = 'Vasy Pupkin'
+const age = '18';
+console.log(age + 5);
+console.log(Number(age) + 5)
+console.log(age - 5)
+console.log(Number(age) - 5)
 
-const template = 'Author ' + author + ' Oreder ' + projectName + ' price ' + price
-console.log(template)
+const userName = 'Vasy'
+console.log(Number(userName) + 5)
 
-const template2 = `Author ${author} order ${projectName} price ${price}`
-console.log(template2)
+console.log(typeof NaN)
 
-const template3 = 'Project ' + projectName + '\n' + 'Price: ' + price
-console.log(template3) 
+console.log(String(4) + 7)
 
-const template4 = `Project ${projectName}
-Price ${price}`
-console.log(template4)
+console.log(Boolean(2))
+console.log(Boolean(''))
+console.log(Boolean('ABCD'))
+
+const a = 2 + '10' //string
+console.log(a - 10) //number
