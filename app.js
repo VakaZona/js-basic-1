@@ -1,18 +1,11 @@
-const bmwX3Price = 100000
-const forFocusPrice = 10000
-const money = 20000
+const input = prompt('7+15=? \n7-15=?')
 
-let message
-
-if (money > bmwX3Price) {
-    message = 'BMW X3'
-} else {
-    message = 'Bicycle'
+switch (true) {
+    case (input === 'Im not robot'):
+    case (input === '22'):
+    case (input === '-8'):
+        console.log('Success')
+        break
+    default:
+        console.log('You robot!')
 }
-
- const str = money > bmwX3Price ? 'BMW X3' : 'Bicycle'
-
-console.log(`I can buy ${message}`)
-console.log(`I can buy ${str}`) 
-console.log(`I can buy ${money > bmwX3Price ? 'BMW X3' : 'Bicycle'}`)
-console.log(`I can buy ${money > bmwX3Price ? 'BMW X3' : money > forFocusPrice ? 'Ford Focus' : 'Bicycle'}`)
