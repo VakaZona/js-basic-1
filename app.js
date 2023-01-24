@@ -1,19 +1,24 @@
-const KG_IN_USD = 7
-const KM_IN_USD = 5
-
-function calculateW(present) {
-    return present * KG_IN_USD
+function creditPotencial(age, isWork) {
+    if (age > 24 && isWork) {
+        return 500
+    } else if (age > 24 && !isWork) {
+        return 100
+    }
+    return 0
 }
 
-function calculateKm(distance) {
-    return distance * KM_IN_USD
+function creditMacBook(age, isWork, money) {
+    if (money >= 2000) {
+        return 'Yes'
+    } else {
+        money += creditPotencial(age, isWork)
+        if (money >= 2000) {
+            return 'Yes'
+        } else {
+            return 'No'
+        }
+    }
+    
 }
 
-function getExchangePrice(present1, present2, distance) {
-    const price1 = calculateW(present1)
-    const price2 = calculateW(present2)
-    const distancePrice = calculateKm(distance)
-    return price1 + price2 + distancePrice
-}
-
-console.log(getExchangePrice(1, 2, 10))
+console.log(creditMacBook(25, 1, 1500))
