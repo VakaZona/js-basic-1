@@ -1,18 +1,32 @@
-const roles = ['user', 'admin', 'manager']
+const roles = ['user', 'admin', 'manager', 'superuser']
 
-const elIndex = roles.indexOf('admin')
-console.log(elIndex)
+const res = roles.slice(2)
+console.log(res)
 
-const el2Index = roles.indexOf('superadmin')
-console.log(el2Index)
+const res2 = roles.slice(0, 3)
+console.log(res2)
 
-if (roles.indexOf('admin') >= 0) {
-    console.log('Success')
-}
+const res3 = roles.slice(-1)
+console.log(res3) 
 
-console.log(roles.includes('admin'))
-console.log(roles.includes('superadmin'))
+const res4 = roles.slice(1, -2)
+console.log(res4) 
+console.log(roles)
 
-if (roles.includes('admin')) {
-    console.log('Success')
-}
+// const res5 = roles.splice(2)
+// console.log(res5)
+// console.log(roles)
+
+// const res6 = roles.splice(2, 1)
+// console.log(res6)
+// console.log(roles)
+
+const res7 = roles.reverse()
+console.log(res7)
+console.log(roles)
+
+const newRoles = ['sysadmin', 'developer']
+const res8 = roles.concat(newRoles)
+console.log(res8)
+
+
