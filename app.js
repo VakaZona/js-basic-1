@@ -1,15 +1,14 @@
-const arr = ['!', 'JS', 'love', 'I']
-let res = []
+// for (let i = 1; i < 5; i++) {
+//     console.log(`Cycle 1 - ${i}`)
+//     for (let j = 1; j < 5; j++){
+//         console.log(`Cycle 2 - ${j}`)
+//     }
+// }
 
-for (i = 0; i < arr.length; i++) {
-    res = res.concat(arr[arr.length - 1 - i])
-    console.log(arr[arr.length - 1 - i])
+const tasks = [[1, 'Task 1'], [2, 'Task 2']]
+
+for (let i = 0; i < tasks.length; i++) {
+    for (let j = 0; j < tasks[i].length; j++){
+        console.log(tasks[i][j])
+    }
 }
-
-console.log(res.join(' '))
-
-let res2 = []
-for (let i = arr.length - 1; i >= 0; i--) {
-    res2.push(arr[i])
-}
-console.log(res2.join(' '))
