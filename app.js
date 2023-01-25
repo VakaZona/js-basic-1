@@ -1,24 +1,26 @@
-function creditPotencial(age, isWork) {
-    if (age > 24 && isWork) {
-        return 500
-    } else if (age > 24 && !isWork) {
-        return 100
-    }
-    return 0
+const role1 = 'admin'
+const role2 = 'user'
+const role3 = 'superuser'
+
+const roles = ['admin', 'user', 'superuser']
+const userInfo = ['Anna', 25]
+console.log(roles)
+console.log(roles[0])
+
+console.log(roles.length)
+console.log(roles[roles.length - 1])
+
+console.log(roles.at(0))
+console.log(roles.at(-1))
+
+const usersAge = [2040 - 2022, 20 - '6', 10 > 0 ? 5 : 0]
+console.log(usersAge)
+
+const userNames = new Array('Vasy', 'Petr', 'Kate')
+console.log(userNames)
+
+function square(el) {
+    return el * el
 }
 
-function creditMacBook(age, isWork, money) {
-    if (money >= 2000) {
-        return 'Yes'
-    } else {
-        money += creditPotencial(age, isWork)
-        if (money >= 2000) {
-            return 'Yes'
-        } else {
-            return 'No'
-        }
-    }
-    
-}
-
-console.log(creditMacBook(25, 1, 1500))
+console.log(square(5))
