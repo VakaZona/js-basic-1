@@ -1,36 +1,35 @@
 const tasks = ['Task 1']
 
-function addTask (task, tasks) {
+function AddTask (task, tasks) {
     tasks.push(task)
     console.log(tasks)
 }
 
-function deleteTask(task, tasks) {
+function DeleteTask(task, tasks) {
     const elementId = tasks.indexOf(task)
     if (elementId === -1) {
         return
     }
-    tasks.splice(elementId, 1)
+    return tasks.splice(elementId, 1)
     console.log(tasks)
 
 }
 
-function unshiftTask(task, tasks) {
-    const elementId = tasks.indexOf(task)
-    if (elementId === -1) {
+function UnshiftTask(task, tasks) {
+    const result = DeleteTask(task, tasks)
+    if (!result) {
         return
     }
-    const deleteTask = tasks.splice(elementId, elementId)
-    newTask = deleteTask.join('')
-    tasks.unshift(newTask)
+    tasks.unshift(result[0])
     console.log(tasks)
+    
 }
 
-addTask('Task 2', tasks)
-addTask('Task 3', tasks)
-addTask('Task 4', tasks)
-deleteTask('Task 3', tasks)
-unshiftTask('Task 4', tasks)
+AddTask('Task 2', tasks)
+AddTask('Task 3', tasks)
+AddTask('Task 4', tasks)
+DeleteTask('Task 3', tasks)
+UnshiftTask('Task 4', tasks)
 
 
 
