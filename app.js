@@ -1,26 +1,22 @@
-const role1 = 'admin'
-const role2 = 'user'
-const role3 = 'superuser'
+const users = ['Anna', 'Vika', 'Kate']
 
-const roles = ['admin', 'user', 'superuser']
-const userInfo = ['Anna', 25]
-console.log(roles)
-console.log(roles[0])
+users[2] = 'Kris'
+console.log(users)
 
-console.log(roles.length)
-console.log(roles[roles.length - 1])
+users[3] = 'Nikita'
+console.log(users)
 
-console.log(roles.at(0))
-console.log(roles.at(-1))
+const arrLength = users.push('Nikita')
+console.log(users)
+console.log(arrLength)
 
-const usersAge = [2040 - 2022, 20 - '6', 10 > 0 ? 5 : 0]
-console.log(usersAge)
+users.unshift('Vasy')
+console.log(users)
 
-const userNames = new Array('Vasy', 'Petr', 'Kate')
-console.log(userNames)
+const el = users.pop()
+console.log(users)
+console.log(el)
 
-function square(el) {
-    return el * el
-}
-
-console.log(square(5))
+const el2 = users.shift()
+console.log(users)
+console.log(el2)
