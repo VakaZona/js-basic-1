@@ -1,3 +1,10 @@
-const data = [1, 2, 3, 4, 5, 6]
-const [one, two, ...others] = data
-console.log(one, two, others) 
+const url = 'https://localhost.ru/learn/javascript'
+
+function getUrlParts(url) {
+    const [protocol, _, domen, ...path] = url.split('/')
+    console.log(`Protocol: ${protocol.split(':')[0]}`)
+    console.log(`Domen: ${domen}`)
+    console.log(`Path: /${path.join('/')}`)
+}
+
+getUrlParts(url)
