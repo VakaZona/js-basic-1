@@ -1,22 +1,18 @@
-const users = ['Anna', 'Vika', 'Kate']
+const roles = ['user', 'admin', 'manager']
 
-users[2] = 'Kris'
-console.log(users)
+const elIndex = roles.indexOf('admin')
+console.log(elIndex)
 
-users[3] = 'Nikita'
-console.log(users)
+const el2Index = roles.indexOf('superadmin')
+console.log(el2Index)
 
-const arrLength = users.push('Nikita')
-console.log(users)
-console.log(arrLength)
+if (roles.indexOf('admin') >= 0) {
+    console.log('Success')
+}
 
-users.unshift('Vasy')
-console.log(users)
+console.log(roles.includes('admin'))
+console.log(roles.includes('superadmin'))
 
-const el = users.pop()
-console.log(users)
-console.log(el)
-
-const el2 = users.shift()
-console.log(users)
-console.log(el2)
+if (roles.includes('admin')) {
+    console.log('Success')
+}
