@@ -1,35 +1,18 @@
-const tasks = ['Task 1']
+const userData = ['Anton', 18, 'Moscow']
 
-function AddTask (task, tasks) {
-    tasks.push(task)
-    console.log(tasks)
+function getData() {
+    return ['Anton', 18, 'Moscow']
 }
+// const userName = userData[0]
+// const age = userData[1]
+// const city = userData[2]
+// console.log(userName, age, city)
 
-function DeleteTask(task, tasks) {
-    const elementId = tasks.indexOf(task)
-    if (elementId === -1) {
-        return
-    }
-    return tasks.splice(elementId, 1)
-    console.log(tasks)
+const [userName, age, city] = getData()
+console.log(userName, age, city)
 
-}
+const [userName2, age2] = userData
+console.log(userName2, age2)
 
-function UnshiftTask(task, tasks) {
-    const result = DeleteTask(task, tasks)
-    if (!result) {
-        return
-    }
-    tasks.unshift(result[0])
-    console.log(tasks)
-    
-}
-
-AddTask('Task 2', tasks)
-AddTask('Task 3', tasks)
-AddTask('Task 4', tasks)
-DeleteTask('Task 3', tasks)
-UnshiftTask('Task 4', tasks)
-
-
-
+const [userName3, _, city3] = userData
+console.log(userName3, city3);
