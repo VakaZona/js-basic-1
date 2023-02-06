@@ -1,19 +1,10 @@
-function add(a, b) {
-    return a + b
+function power(pow) {
+    return function (num) {
+        return num ** pow
+    }
 }
 
-function subtract(a, b) {
-    return a - b
-}
+const powerOfTwo = power(2)
+console.log(powerOfTwo(5))
 
-function calculate(a, b, fn) {
-    console.log(fn.name)
-    const res = fn(a, b)
-    return res
-}
-
-const res = calculate(1, 2, add)
-console.log(res)
-
-const res2 = calculate(4, 2, subtract)
-console.log(res2)
+console.log(power(5)(4))
