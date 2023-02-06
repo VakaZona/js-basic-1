@@ -1,9 +1,19 @@
-const prices = [[2, 4], [3, 4], [10, [20, 40]]]
+const users = ['Vasy', 'Masha', 'Anna', 'Katy']
 
-const res = prices.flat()
-const res2 = prices.flat(2)
+console.log(users)
+users.sort()
+console.log(users)
 
-console.log(res, res2)
+const operations = [100, -300, -100, 50, 480]
+operations.sort((a, b) => a - b)
+console.log(operations)
 
-const res3 = prices.flatMap(el => el.concat([1]))
-console.log(res3)
+operations.sort((a, b) => {
+    if (a < b) {
+        return 1
+    }
+    if( a > b) {
+        return -1
+    }
+})
+console.log(operations)
