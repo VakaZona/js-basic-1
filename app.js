@@ -1,18 +1,11 @@
-const operations = [100, -20, 7, -30 , 50]
+const arr = [2, 4, 4, 10]
 
-const finalBalance = operations.reduce((acc, value, i) => {
-    console.log(`${i}: acc = ${acc}, value = ${value}`)
-    return acc += value
-}, 0)
-
-console.log(finalBalance)
-
-const minElement = operations.reduce((acc, operation) => {
-    if (operation > acc) {
-        return acc
+const avg = arr.reduce((acc, value, i) => {
+    if (i != arr.length - 1) {
+        return acc + value
     } else {
-        return operation
+        return (acc + value) / arr.length
     }
 }, 0)
 
-console.log(minElement)
+console.log(avg)
