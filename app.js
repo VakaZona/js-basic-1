@@ -1,4 +1,9 @@
-const arr = [2, 4, 5, 10, 20]
+const prices = [[2, 4], [3, 4], [10, [20, 40]]]
 
-console.log(arr.some(el => el === 0))
-console.log(arr.some(el => el === 10))
+const res = prices.flat()
+const res2 = prices.flat(2)
+
+console.log(res, res2)
+
+const res3 = prices.flatMap(el => el.concat([1]))
+console.log(res3)
