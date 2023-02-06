@@ -1,11 +1,15 @@
-const arr = [1, 2, 3, 4, 5]
+const userName = 'Vasy Pupkin'
 
-console.log(new Array(1, 2, 3, 4, 5))
-const arr2 = new Array(5)
-console.log(arr2)
-arr2.fill(1, 0, 3)
-arr2.fill(2, 3, 5)
-console.log(arr2)
+console.log(userName)
+console.log(userName[0])
+console.log(userName.charAt(2))
 
-const arr3 = Array.from({length: 5}, (el, i) => i + 1)
-console.log(arr3)
+console.log(userName.length)
+
+console.log(userName.indexOf('P'))
+console.log(userName.lastIndexOf('p'))
+console.log(userName.indexOf('pk'))
+console.log(userName.includes('pk'))
+
+console.log(userName.slice(5))
+console.log(userName.slice(5,7))
