@@ -1,19 +1,11 @@
-const users = ['Vasy', 'Masha', 'Anna', 'Katy']
+const arr = [1, 2, 3, 4, 5]
 
-console.log(users)
-users.sort()
-console.log(users)
+console.log(new Array(1, 2, 3, 4, 5))
+const arr2 = new Array(5)
+console.log(arr2)
+arr2.fill(1, 0, 3)
+arr2.fill(2, 3, 5)
+console.log(arr2)
 
-const operations = [100, -300, -100, 50, 480]
-operations.sort((a, b) => a - b)
-console.log(operations)
-
-operations.sort((a, b) => {
-    if (a < b) {
-        return 1
-    }
-    if( a > b) {
-        return -1
-    }
-})
-console.log(operations)
+const arr3 = Array.from({length: 5}, (el, i) => i + 1)
+console.log(arr3)
