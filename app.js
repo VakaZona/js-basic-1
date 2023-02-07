@@ -1,4 +1,10 @@
-const card = '2345321234546543'
-
-card.slice(-4).padStart(16, '*')
-console.log(card.slice(-4).padStart(16, '*'))
+const userArray = ['Vasy', 'Pupkin', 24]
+const user = {
+    name: 'Vasy',
+    surname: 'Pupkin',
+    age: 24,
+    skills: [
+        'Programming',
+        'Cooking'
+    ],
+}
