@@ -1,15 +1,11 @@
-const sum = 1
-console.log('start')
-console.log(sum)
+let firstName = 'Anton'
+let firstName2 = firstName
+firstName = 'New'
+console.log(firstName, firstName2)
 
-function add5(n) {
-    n = n + 5
-    if (n > 100) {
-        return n
-    }
-    console.log(n)
-    return add5(n)
+let user1 = {
+    name: 'Anton'
 }
-
-add5(sum)
-console.log('end process')
+let user2 = user1
+user2.name = 'New'
+console.log(user1, user2)
