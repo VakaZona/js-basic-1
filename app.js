@@ -1,10 +1,5 @@
-const userFullName = 'Vasy Pupkin Vasylevich'
+const film = 'Batman '
 
-console.log(userFullName.split(' '))
-const [firstName, familyName, lastName] = userFullName.split(' ')
-console.log(firstName)
-console.log(familyName)
-console.log(lastName)
-
-const arr = ['You', 'learn', 'JS']
-console.log(arr.join(' '))
+console.log(film.padStart(10, '*'))
+console.log(film.padEnd(10, '*'))
+console.log(film.repeat(10))
