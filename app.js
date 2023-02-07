@@ -1,35 +1,23 @@
-const wallet = {
-    balance: 0,
-    operations: [],
-    increace: function(sum, reason) {
-        this.balance += sum
-        this.operations.push ({
-            reason,
-            sum
-        })
-        return true
+const cities = {
+    msk: {
+        let: 200,
+        temp: 25
     },
-    decrease: function(sum, reason) {
-        if(this.balance < sum) {
-            console.log('No money')
-            return false
-        }
-        this.balance -= sum
-        this.operations.push ({
-            reason,
-            sum: -sum
-        })
-        return true
-    },
-    getOperationsLenght: function() {
-        return this.operations.length
+    spb: {
+        let: 100,
+        temp: 20
     }
 }
 
-console.log(wallet.increace(1000, 'ZP'))
-console.log(wallet.getOperationsLenght())
-console.log(wallet.decrease(2000, 'Buy macbook'))
-console.log(wallet.getOperationsLenght())
-console.log(wallet.decrease(500, 'Buy shop'))
-console.log(wallet.balance)
-console.log(wallet.operations)
+let sumTemp = 0
+console.log(Object.keys(cities))
+let citiesCount = Object.keys(cities).length
+
+for (const key in cities) {
+    sumTemp += cities[key].temp
+}
+console.log(sumTemp / citiesCount)
+
+for (const key of Object.keys(cities)) {
+    console.log(key)
+}
