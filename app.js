@@ -1,5 +1,4 @@
-const film = 'Batman '
+const card = '2345321234546543'
 
-console.log(film.padStart(10, '*'))
-console.log(film.padEnd(10, '*'))
-console.log(film.repeat(10))
+card.slice(-4).padStart(16, '*')
+console.log(card.slice(-4).padStart(16, '*'))
