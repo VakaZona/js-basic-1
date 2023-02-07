@@ -1,11 +1,20 @@
-let firstName = 'Anton'
-let firstName2 = firstName
-firstName = 'New'
-console.log(firstName, firstName2)
-
-let user1 = {
-    name: 'Anton'
+const user = {
+    name: 'Anton',
+    id: 1,
+    roles: ['Admin']
 }
-let user2 = user1
-user2.name = 'New'
-console.log(user1, user2)
+
+// const newUser = Object.assign({}, user)
+// user.name = 'New user'
+// console.log(user)
+// console.log(newUser)
+
+const newUser2 = {
+    ...user
+}
+newUser2.name = 'New user'
+newUser2.roles.push('User')
+
+console.log(user)
+console.log(newUser2)
+
