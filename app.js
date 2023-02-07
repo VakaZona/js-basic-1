@@ -1,17 +1,15 @@
-const cities = {
-    msk: {
-        temp: {
-            celcius: 25
-        }
-    },
-    spb: {
+const sum = 1
+console.log('start')
+console.log(sum)
 
+function add5(n) {
+    n = n + 5
+    if (n > 100) {
+        return n
     }
+    console.log(n)
+    return add5(n)
 }
 
-const city = 'spb'
-if (cities[city] != undefined && cities[city].temp != undefined) {
-    console.log(cities[city].temp.celcius)
-}
-
-console.log(cities[city]?.temp?.celcius)
+add5(sum)
+console.log('end process')
