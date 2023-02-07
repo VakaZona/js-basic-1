@@ -1,20 +1,19 @@
-const user = {
-    name: 'Anton',
-    id: 1,
-    roles: ['Admin']
-}
+'use strict';
 
-// const newUser = Object.assign({}, user)
-// user.name = 'New user'
-// console.log(user)
-// console.log(newUser)
+let myCoolVariable = 1
 
-const newUser2 = {
-    ...user
-}
-newUser2.name = 'New user'
-newUser2.roles.push('User')
+// if (true) {
+//     myCoolVariable = 3
+//     function a() {
+//         console.log('Test')
+//     }
+// }
+// a()
+// console.log(myCoolVariable)
 
-console.log(user)
-console.log(newUser2)
+// const interface = 7
 
+// function a(b, b) {
+//     console.log(b)
+// }
+// a(1, 1)
