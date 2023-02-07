@@ -1,11 +1,24 @@
 const users = [
-    {name: 'Vasy', age: 30},
-    {name: 'Kate', age: 18},
-    {name: 'Anna', age: 40},
-    {name: 'Piter', age: 25},
+    {
+        name: 'Vasy',
+        surname: 'Pupkin',
+        age: 30,
+        skills: ['DevOps', 'Developer']
+    },
+    {
+        name: 'Kate',
+        surname: 'Belova',
+        age: 18,
+        skills: ['Designer']
+    },
 ]
 
-console.log(users)
-console.log(users.sort((a, b) => {
-    return a.age - b.age
-}))
+const userData = users.map(user => {
+    return {
+        fullName: `${user.name} ${user.surname}`,
+        skillNum: user.skills.length
+
+    }
+})
+
+console.log(userData)
