@@ -4,8 +4,8 @@ const wallet = {
     increace: function(sum, reason) {
         this.balance += sum
         this.operations.push ({
-            reason: reason,
-            sum: sum
+            reason,
+            sum
         })
         return true
     },
@@ -16,7 +16,7 @@ const wallet = {
         }
         this.balance -= sum
         this.operations.push ({
-            reason: reason,
+            reason,
             sum: -sum
         })
         return true
