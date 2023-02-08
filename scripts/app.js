@@ -1,25 +1,24 @@
 'use strict'
 
-function submitForm() {
-    const input = document.querySelector('.input').value
-    if (!input) {
-        retrun
-    }
-    document.querySelector('.panel').innerText = input
-    document.querySelector('.input').value = ''
-    document.querySelector('.notification').classList.add('notification_active')
-}
+let habbits = []
+const HABBIT_KEY = 'HABBIT_KEY'
 
-function inputChanged(e) {
-    if (e.code == 'Enter') {
-        submitForm()
+//Utils
+
+
+function loadData() {
+    const habbitsString = localStorage.getItem(HABBIT_KEY)
+    const habbitArray = JSON.parse(habbitsString)
+    if (Array.isArray(habbitArray)) {
+        habbits = habbitArray 
     }
 }
 
-const obj = JSON.parse('{ "a": 1 }')
-console.log(obj.a)
+function saveData() {
+    localStorage.setItem(HABBIT_KEY, JSON.stringify(habbits))
+}
 
-const str = JSON.stringify(obj)
-console.log(str)
-
+(() => {
+    loadData()
+})()
 
