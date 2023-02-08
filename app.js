@@ -15,8 +15,13 @@ function submitForm() {
         retrun
     }
     document.querySelector('.panel').innerText = input
-    document.querySelector('.input').value = ''
-    document.querySelector('.notification').classList.add('notification_active')
+    // document.querySelector('.input').value = ''
+    // document.querySelector('.notification').classList.add('notification_active')
+    
+    //bad practice
+    document.querySelector('.notification').getAttribute('class')
+    document.querySelector('.notification').setAttribute('class', 'notification_active')
+
 }
 
 function inputChanged(e) {
