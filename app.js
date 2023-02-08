@@ -9,7 +9,7 @@
 //     document.querySelector('.input').value = ''
 // })
 
-function changedClick() {
+function submitForm() {
     const input = document.querySelector('.input').value
     if (!input) {
         retrun
@@ -18,3 +18,16 @@ function changedClick() {
     document.querySelector('.input').value = ''
 }
 
+function inputChanged(e) {
+    if (e.code == 'Enter') {
+        submitForm()
+    }
+}
+
+
+// document.querySelector('.input').addEventListener('keydown', (e) => {
+//     if (e.code == 'Enter') {
+//         submitForm()
+//         console.log('Enter')
+//     }
+// })
