@@ -4,16 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/style.css"/>
+    <title>Habbit app</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/main.css"/>
 </head>
-<body style="background-color: #1C1B21; text-align: center;">
-    <img src="./icons8-davinci-resolve.svg" alt="" srcset="">
-    <div class="panel">I love this!</div>
-    <input class="input" onkeydown="inputChanged(event)" />
-    <button class="button" onclick="submitForm()">Change</button>
-    <div class="notification">Changed!</div>
-    <div class="test"></div>
-    <script src="./app.js"></script>
+<body >  
+    <div class="app">
+        <div class="panel">
+            <img class="logo" src="/images/logo.svg" alt="Logo Habbit app" />
+            <nav class="menu">
+                <div class="menu__list">
+                    <button class="menu__item menu__item__active">
+                        <img src="./images/Water.svg" alt="Water" />
+                    </button>
+                </div>
+                <div class="menu__list">
+                    <button class="menu__item">
+                        <img src="./images/food.svg" alt="Food" />
+                    </button>
+                </div>
+                <button class="menu__add">
+                    <img src="/images/Add.svg" alt="Add" />
+                </button>
+            </nav>
+        </div>
+        <div class="content">
+            <header>
+                <h1>Push up</h1>
+                <div class="progress">
+                    <div class="progress__text">
+                        <div class="progress__name">Progress</div>
+                        <div class="progress__percent">80%</div>
+                    </div>
+                    <div class="progress__bar">
+                        <div class="progress__cover-bar"></div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <div>
+                    <div class="habbit">
+                        <div class="habbit__day">Day 1</div>
+                        <div class="habbit__comment">
+                            Cool day
+                        </div>
+                        <button class="habbit__delete">
+                            <img src="images/shape.svg" alt="Delete day">
+                        </button>
+                    </div>
+                </div>
+                <div class="habbit">
+                    <div class="habbit__day">Day 2</div>
+                    <form class="habbit__form">
+                        <input class="input_icon" type="text" placeholder="Comment" />
+                        <img class="input__icon" src="images/comment.svg" alt="Comment">
+                        <button class="button">Add</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script src="scripts/app.js"></script>
 </body>
 </html>
