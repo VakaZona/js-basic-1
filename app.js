@@ -6,13 +6,8 @@ function submitForm() {
         retrun
     }
     document.querySelector('.panel').innerText = input
-    // document.querySelector('.input').value = ''
-    // document.querySelector('.notification').classList.add('notification_active')
-
-    //bad practice
-    document.querySelector('.notification').getAttribute('class')
-    document.querySelector('.notification').setAttribute('class', 'notification_active')
-
+    document.querySelector('.input').value = ''
+    document.querySelector('.notification').classList.add('notification_active')
 }
 
 function inputChanged(e) {
@@ -21,16 +16,10 @@ function inputChanged(e) {
     }
 }
 
-const panelText = 'Panel'
-const panelClass = 'button'
-const newElement = document.createElement('div')
-newElement.setAttribute('user-id', 1)
-newElement.classList.add('panel')
-// newElement.innerText = 'Button'
+localStorage.setItem('token', 'testtokecn')
 
-newElement.innerHTML = `<button class="${panelClass}">${panelText}</button>`
+console.log(localStorage.getItem('token'))
 
-document.querySelector('.test').appendChild(newElement)
-
+localStorage.clear()
 
 
