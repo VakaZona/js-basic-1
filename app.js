@@ -1,19 +1,9 @@
-'use strict';
+'use strict'
 
-let myCoolVariable = 1
+console.log(this)
 
-// if (true) {
-//     myCoolVariable = 3
-//     function a() {
-//         console.log('Test')
-//     }
-// }
-// a()
-// console.log(myCoolVariable)
-
-// const interface = 7
-
-// function a(b, b) {
-//     console.log(b)
-// }
-// a(1, 1)
+function addNum(num1, num2) {
+    console.log(this)
+    return num1 + num2
+}
+addNum()
