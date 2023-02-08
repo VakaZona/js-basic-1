@@ -1,14 +1,5 @@
 'use strict'
 
-// document.querySelector('.button').addEventListener('click', function() {
-//     const input = document.querySelector('.input').value
-//     if (!input) {
-//         retrun
-//     }
-//     document.querySelector('.panel').innerText = input
-//     document.querySelector('.input').value = ''
-// })
-
 function submitForm() {
     const input = document.querySelector('.input').value
     if (!input) {
@@ -17,7 +8,7 @@ function submitForm() {
     document.querySelector('.panel').innerText = input
     // document.querySelector('.input').value = ''
     // document.querySelector('.notification').classList.add('notification_active')
-    
+
     //bad practice
     document.querySelector('.notification').getAttribute('class')
     document.querySelector('.notification').setAttribute('class', 'notification_active')
@@ -30,10 +21,16 @@ function inputChanged(e) {
     }
 }
 
+const panelText = 'Panel'
+const panelClass = 'button'
+const newElement = document.createElement('div')
+newElement.setAttribute('user-id', 1)
+newElement.classList.add('panel')
+// newElement.innerText = 'Button'
 
-// document.querySelector('.input').addEventListener('keydown', (e) => {
-//     if (e.code == 'Enter') {
-//         submitForm()
-//         console.log('Enter')
-//     }
-// })
+newElement.innerHTML = `<button class="${panelClass}">${panelText}</button>`
+
+document.querySelector('.test').appendChild(newElement)
+
+
+
