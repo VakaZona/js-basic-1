@@ -1,9 +1,16 @@
 'use strict'
 
-console.log(this)
+// addEventListener('load', () => {
+//     console.log(document)
+// })
 
-function addNum(num1, num2) {
-    console.log(this)
-    return num1 + num2
-}
-addNum()
+console.log(document.querySelector('.panel'))
+console.log(document.querySelector('.panel').innerHTML)
+
+const panelText = document.querySelector('.panel').innerText
+console.log(panelText)
+
+document.querySelector('.panel').innerText = 'New Text'
+
+document.querySelector('.input').value = 'Text'
+
