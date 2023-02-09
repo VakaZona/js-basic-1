@@ -16,7 +16,7 @@
             <img class="logo" src="/images/logo.svg" alt="Logo Habbit app" />
             <nav class="menu">
                 <div class="menu__list"></div>
-                <button class="menu__add">
+                <button class="menu__add" onclick="tooglePopup()">
                     <img src="/images/Add.svg" alt="Add" />
                 </button>
             </nav>
@@ -46,7 +46,7 @@
                 </div>
             </main>
         </div>
-        <div class="cover cover_hidden">
+        <div class="cover cover_hidden" id="add-habbit-popup">
             <div class="popup">
                 <h2>New Habbit</h2>
                 <div class="icon-label">Icon</div>
@@ -64,9 +64,9 @@
                 <form class="popup__form">
                     <input type="text" name="name" placeholder="Name">
                     <input type="number" name="target" placeholder="Target">
-                    <button class="button" type="submit">Add</button>
+                    <button class="button" type="submit" onclick="tooglePopup()">Add</button>
                 </form>
-                <button class="popup__close">
+                <button class="popup__close" onclick="tooglePopup()">
                     <img src="images/close.svg" alt="Close">
                 </button>
             </div>

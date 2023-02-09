@@ -16,10 +16,21 @@ const page = {
     content: {
         daysContainer: document.getElementById('days'),
         nextDay: document.querySelector('.habbit__day')
+    },
+    popup: {
+        index: document.getElementById('add-habbit-popup')
     }
 }
 //Utils
 
+
+function tooglePopup() {
+    if (page.popup.index.classList.contains('cover_hidden')) {
+        page.popup.index.classList.remove('cover_hidden')
+    } else {
+        page.popup.index.classList.add('cover_hidden')
+    }
+}
 
 function loadData() {
     const habbitsString = localStorage.getItem(HABBIT_KEY)
