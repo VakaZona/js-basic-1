@@ -35,23 +35,13 @@
                 </div>
             </header>
             <main>
-                <div>
-                    <div class="habbit">
-                        <div class="habbit__day">Day 1</div>
-                        <div class="habbit__comment">
-                            Cool day
-                        </div>
-                        <button class="habbit__delete">
-                            <img src="images/shape.svg" alt="Delete day">
-                        </button>
-                    </div>
-                </div>
+                <div id="days"></div>
                 <div class="habbit">
-                    <div class="habbit__day">Day 2</div>
-                    <form class="habbit__form">
-                        <input class="input_icon" type="text" placeholder="Comment" />
+                    <div class="habbit__day">Day -</div>
+                    <form class="habbit__form" onsubmit="addDays(event)">
+                        <input name="comment" class="input_icon" type="text" placeholder="Comment" />
                         <img class="input__icon" src="images/comment.svg" alt="Comment">
-                        <button class="button">Add</button>
+                        <button class="button" type="submit">Add</button>
                     </form>
                 </div>
             </main>
